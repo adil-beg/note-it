@@ -1,0 +1,260 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Albert Sans', Arial;
+  background-color: rgb(31, 32, 42);
+}
+
+
+/*Header Section*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(181, 216, 228, 0.954);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: solid rgb(240, 240, 240) 2px;
+  z-index: 1;
+}
+
+.left-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  padding: 0 10px;
+}
+
+.notes-bar {
+  flex: 1;
+  width: 100%;
+  height: 34px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: solid gray 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  background-color: white;
+  opacity: 1;
+}
+
+.notes-bar::placeholder {
+  font-family: 'Roboto', Arial;
+}
+
+.note-it-button {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.right-section {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  padding-right: 20px;
+}
+
+.note-it-logo {
+  height: 50px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.profile-picture {
+  border-radius: 50%;
+}
+
+.note-it-home-logo, .note-it-button-icon, .world-icon, .profile-picture, .settings-icon {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  object-fit: cover;
+  cursor: pointer;
+} 
+
+.note-it-home-logo:hover,
+.note-it-button-icon:hover,
+.world-icon:hover,
+.profile-picture:hover,
+.settings-icon:hover {
+  background-color: rgba(109, 140, 150, 0.954);
+}
+
+.note-it-home-logo:active,
+.note-it-button-icon:active,
+.world-icon:active,
+.profile-picture:active,
+.settings-icon:active {
+  background-color: rgba(180, 195, 200, 0.581);
+}
+
+/*Main Tweet Section*/
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.53);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  max-width: 600px;
+  padding: 16px;
+}
+
+.tweet {
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 16px;
+  background-color: rgba(158, 197, 210, 0.771);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-image img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.name-address {
+  position: absolute;
+  transform: translateX(100px);
+}
+
+.name {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.follow-btn {
+  border: solid #1a93de 3px;
+  border-radius: 26px;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.following {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.tweet-content {
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  color: rgba(0, 0, 0, 0.53);
+}
+
+.comment-btn, .hide-btn {
+  margin-right: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid #1a93de 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+/* New properties created for the JavaScript buttons*/
+.following, .hidden {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.follow-btn:hover, .comment-btn:hover, .hide-btn:hover {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.like-btn {
+  margin-right: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid #f21d59d8 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.like-btn:hover {
+  background-color: #f21d59d8;
+  color: white;
+}
+
+.address::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 1;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  cursor: pointer;
+}
+
+.address:hover:after {
+  width: 85%; 
+  left: 0;
+  cursor: pointer;
+}
+
+
+@keyframes heartFloat {
+  0% {
+    transform: translateY(100px) scale(0.1);
+    transform: translateX(50px) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(4);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/heart-profile-pic.png');
+  background-size: cover;
+  animation: heartFloat 1s ease-out;
+}
