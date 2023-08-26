@@ -105,48 +105,7 @@ tweetElements.forEach(tweetElement => {
   setupTweetFunctionality(tweetElement);
 });
 
-
 /*
-Code the add the New Tweet Feature
-
-// 1. Add an event listener to the "Note it!" button:
-const noteItButton = document.getElementById('notesBar'); // Get the button by its ID
-noteItButton.addEventListener('click', createNewTweet);
-
-
-// 2. Create a function to handle creating a new tweet:
-function createNewTweet() {
-  const notesBar = document.querySelector('.notes-bar'); // Get the input element
-  const newTweetContent = notesBar.value; // Get the value of the input
-
-  if (newTweetContent.trim() === '') {
-    // Check if the input is empty or only contains whitespace
-    alert('Please enter some text before tweeting.');
-    return;
-  }
-
-  const newTweetElement = document.createElement('div');
-  newTweetElement.classList.add('tweet');
-
-  newTweetElement.innerHTML = `
-    <div class="head">
-      <!-- ... Profile image, name, etc. ... -->
-    </div>
-    <div class="tweet-content">
-      <p>${newTweetContent}</p>
-    </div>
-    <div class="foot">
-      <!-- ... Date, buttons, etc. ... -->
-    </div>
-  `;
-
-  setupTweetFunctionality(newTweetElement); // Apply event listeners to new tweet
-  const container = document.querySelector('.container');
-  container.insertBefore(newTweetElement, container.firstChild); // Insert new tweet at the beginning
-  notesBar.value = ''; // Clear the input
-}
-
-
 Notes:
 - Make sure you place the event listener setup outside of the createNewTweet function so that it doesn't create duplicate listeners.
 - With these changes, when you enter text in the input box and click the "Note it!" button, a new tweet will be created at the top of the tweet container with the content you entered. The new tweet will also have the same interactivity and buttons as the existing tweets.
