@@ -46,6 +46,26 @@ function createNewTweet() {
   notesBar.value = ''; // Clear the input
 }
 
+const notesBar = document.querySelector('.notes-bar');
+const charCount = document.querySelector('.char-count');
+
+notesBar.addEventListener('input', updateCharCount);
+
+function updateCharCount() {
+  const maxLength = 50;
+  const currentLength = notesBar.value.length;
+  const charsLeft = maxLength - currentLength;
+  
+  charCount.textContent = charsLeft;
+
+  if (charsLeft < 0) {
+    charCount.style.color = '#f21d59d8';
+  } else if (charsLeft < 10) {
+    charCount.style.color = '#e28743';
+  } else {
+    charCount.style.color = 'rgb(151, 150, 150)';
+  }
+}
 
 // Get all the tweet elements
 const tweetElements = document.querySelectorAll('.tweet');
