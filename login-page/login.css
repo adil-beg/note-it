@@ -19,6 +19,7 @@ body {
   background-color: rgba(158, 197, 210, 0.771);
 }
 
+/*Header Logo*/
 .note-it-logo-login {
   display: flex;
   justify-content: center;
@@ -32,6 +33,7 @@ body {
   object-fit: cover;
 }
 
+/*Sign in with Google or Apple buttons*/
 .login-btns {
   display: flex;
   justify-content: center;
@@ -79,6 +81,7 @@ body {
   font-weight: bold;
 }
 
+/*User Login Container*/
 .inputs {
   display: flex;
   justify-content: center;
@@ -90,6 +93,10 @@ body {
   width: 310px;
   height: 130px;
   padding: 30px 20px 20px 20px;
+}
+
+.inputs:hover {
+  background-color: rgba(174, 200, 209, 0.587);
 }
 
 .email, .password {
@@ -132,6 +139,7 @@ body {
   box-shadow: none;
 }
 
+/*Sign up Text*/
 .create-account-text{
   margin-top: 30px;
 }
