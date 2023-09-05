@@ -17,11 +17,11 @@ function createNewTweet() {
   newTweetElement.innerHTML = `
   <div class="head">
     <div class="profile-image">
-      <img src="/images/adil-profile-pic.jpeg">
+      <img src="/images/robot-avatar.png">
     </div>
     <div class="name-address">
-      <div class="name">Adil Del Rey</div>
-      <div class="address"><a href="https://www.twitter.com/adildelrey" target="_blank">@adildelrey</a></div>
+      <div class="name">Guest User</div>
+      <div class="address"><a href="" target="_blank">@guest_user</a></div>
     </div>
     <div>
       <button class="follow-btn">Follow</button>
